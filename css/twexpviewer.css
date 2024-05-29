@@ -1,0 +1,394 @@
+/*
+	Used by : twexpviewer_ui.xsl
+	Bug / suggestion : smainente@ptc.com
+*/	
+
+html,
+body {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+
+a {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+a:hover {
+	color: #005580;
+	text-decoration: underline;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+		
+ul.flat {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+}
+
+ul.tree {
+    margin-left: 15px;
+	padding: 0;
+}
+
+li.dash::before {
+    content: "-\00A0";
+	float: left;
+}
+
+li.dot::before {
+    content: ".\00A0";
+	float: left;
+}
+
+
+li.plus::before {
+    content: "+\00A0";
+    float: left;
+}
+
+table {
+    display: table;
+    border-collapse: collapse;
+	width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tr:hover {
+    /* background-color: #e8f4ff;*/
+	background-color: #fbf7ff;
+}
+
+td, 
+th {
+    text-align: left;
+    padding: 5px;
+	border: 1px solid #dddddd;
+	vertical-align: top;
+}
+
+th {
+	color: #ffffff;
+	background-color: #0088cc;
+}
+
+h4 {
+	/* font-style: italic; */
+	text-align: left;
+	margin-top: 2px;
+	margin-bottom: 0px;
+	font-weight: normal;
+	text-decoration: underline; /* overline; */
+}
+
+.main {
+	display: flex;
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+	height: 100%;
+	flex-direction: column;
+}
+
+.header {
+	overflow: none;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+.body {
+	overflow: auto;
+	padding: 5px;
+}
+
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-container {
+	display: flex;
+    position: relative;
+    margin: auto;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	width: 80%;
+	max-height: 80%;
+	flex-direction: column;
+}
+
+.modal-header {
+    padding: 2px 16px;
+	color: #FFFFFF;
+	background-color: #0088CC;
+	font: normal 10pt Consolas, Monaco, monospace;
+}
+
+.modal-body {
+	padding: 2px 16px;
+	background-color: #3F3F3F;
+	color: #E4E0C4;
+	overflow: auto; /* Enable scroll if needed */
+}
+
+.uml-body {
+	background-color:white;
+	text-align:center;
+	overflow:auto;
+}
+
+pre code {
+    font: normal 10pt Consolas, Monaco, monospace;
+}
+
+.tog-dialog {
+    position: fixed;
+	z-index: 5	;
+	bottom: 0px;
+}
+
+.tog-body {
+	display: none;
+}
+
+
+.tog-results {
+    height: 300px;
+    background-color: #FFFFFF;
+	overflow: auto;
+}
+
+.tog-tab {
+	position:relative;
+	padding: 8px 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.mv-dialog {
+	right: 600px;
+	width: 600px;
+}
+
+.mv-tab {
+    background-color: #7db648;
+}
+
+.mv-body {
+	border: 3px solid #7db648;
+}
+
+.mc-dialog {
+	right: 1200px;
+	width: 600px;
+}
+
+.mc-tab {
+    background-color: #586973;
+}
+
+.mc-body {
+	border: 3px solid #586973;
+}
+
+.wu-dialog {
+	right: 0px;
+	width: 600px;
+}
+
+.wu-tab {
+    background-color: #0088cc;
+}
+
+.wu-body {
+	border: 3px solid #0088cc;
+}
+
+
+div.status {
+	background-color: #eee;
+	height: 20.8px;
+}
+
+span.bc {
+    margin-left: 5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+	white-space: nowrap;
+    background-color: #333333;
+    color: #fff;
+    border-radius: 6px;
+    padding: 7px;
+	text-align: left;
+    position: absolute;
+    z-index: 1;
+    left: 110%;
+	font-size: 12px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #333333 transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.aspects-tt,
+.binding-tt,
+.params-label {
+	margin-left: 5px;
+	border-radius: 3px;
+}
+
+.aspects-tt {
+    background-color: #EFFFF2;
+	padding: 1px 2px 1px;
+}
+
+.binding-tt {
+    background-color: #F8EFDD;
+	padding: 0px 2px 1px;
+}
+
+.params-label {
+    background-color: #E7E9FF;
+	padding: 1px 2px 1px;
+}
+
+.configs-tt {
+	margin-left: 5px;
+}
+
+.help {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.help .helptext {
+    visibility: hidden;
+    width: auto;
+	white-space: nowrap;
+	background-color: #FFFFFF;
+	color: black;
+	font-weight: normal;
+	border-radius: 6px;
+	border: 1px solid #333333;
+    padding: 7px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 10;
+}
+
+.helpright {
+    top: -5px;
+    right: 105%;
+}
+
+.helptop {
+	right: 105%;
+	bottom: 100%;
+}
+
+
+.help:hover .helptext {
+    visibility: visible;
+}
+
+.b {
+	font-weight: bold;
+}
+
+.i {
+	font-style: italic;
+}
+
+.n {
+	font-style: normal;
+}
+
+.s {
+	text-decoration: line-through;
+}
+
+.sev1 {
+	color: #ff3300;
+}
+.sev2 {
+	color: #ff9900;
+}
+.sev3 {
+	color: #000000;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	width: 400px;
+}
+
+.ext-tag {
+	margin-left: 5px;
+    font-weight: bold;
+    color: #ffffff;
+	padding: 2px;
+	font-size: 8px;
+	background-color: #333333;
+	border-radius: 3px;
+}
+
+.entity-config {
+	text-align: right;
+}
+
+span.floatr {
+	float: right;
+}
+
+.action-label {
+	margin-left: 5px;
+}
+
+.impl-label {
+	margin-left: 3px;
+}
+
+.keyword-hl {
+	background-color: #008001;
+}
+
